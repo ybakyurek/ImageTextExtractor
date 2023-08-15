@@ -127,7 +127,7 @@ def txt_to_xlsx(folder_path, xlsx_name):
 
 
 # Örnek çağrı
-process_images_in_folder("/Users/yba/PycharmProjects/pythonProject/pic", lang="eng+tur")
+process_images_in_folder("pic", lang="eng+tur")
 txt_to_xlsx("kelimeler.txt","veriler")
 
 
