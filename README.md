@@ -57,5 +57,7 @@ pip install pytesseract pillow pandas
   pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
   ```
 
-  Bu örnek yollar, Tesseract OCR'ın yüklendiği dizini göstermektedir. Eğer Tesseract OCR'ı farklı bir yere yüklediyseniz, yolunu buna göre güncellemelisiniz. Örnek yollardaki "tesseract.exe" veya "tesseract" dosya isimleri, işletim sistemine ve Tesseract OCR sürümüne bağlı olarak değişebilir. Yolun doğru olduğundan emin olmak için Tesseract OCR'ın yüklendiği dizindeki dosya adını ve yolunu kontrol edebilirsiniz.
+  Bu örnek yollar, Tesseract OCR'ın yüklendiği dizini göstermektedir. Eğer Tesseract OCR'ı farklı bir yere yüklediyseniz, yolunu buna göre güncellemelisiniz. Örnek yollardaki "tesseract.exe" veya "tesseract" dosya isimleri, işletim sistemine ve Tesseract OCR sürümüne bağlı olarak değişebilir. Yolun doğru olduğundan emin olmak için Tesseract OCR'ın yüklendiği dizindeki dosya adını ve yolunu kontrol edebilirsiniz. Eğer bu dosyalar içinde sadece eng dosyaları varsa [türkçe](https://github.com/tesseract-ocr/tessdata/blob/main/tur.traineddata) için ilgili dokümanları eng bilgilerini içeren dosya yoluna atmanız gerekiyor. 
+  
+  Kendime Not: Örneklerle resimler üzerinden verilerin conditionlar ve looplar ile nasıl alınacağını açıklayabilirim. 
 
