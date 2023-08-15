@@ -1,6 +1,7 @@
 import pytesseract
 from PIL import Image
 import os
+import pandas as pd
 
 # Tesseract OCR'nin yolu
 pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'
@@ -107,8 +108,26 @@ def process_images_in_folder(folder_path, lang):
         # OCR ve kaydetme işlemini çağırın
         ocr_and_save(image_path, lang)
 
+def txt_to_xlsx(folder_path, xlsx_name):
+    # Dosyadan verileri okuma
+    with open(folder_path, "r", encoding="utf-8") as file:
+        lines = file.readlines()
+
+    # ":" karakterine göre bölmek ve veriyi düzenlemek
+    data = [line.strip().split(":") for line in lines]
+
+    # Pandas DataFrame oluşturma
+
+    df = pd.DataFrame(data,
+                      columns=["word", "word_type", "definition", "translation", "synonyms", "example", "blank_example",
+                               "word_type_blankex", "word_def"])
+
+    # DataFrame'i Excel dosyasına yazdırma
+    df.to_excel(xlsx_name+".xlsx", index=False)
+
 
 # Örnek çağrı
-langs = ["eng", "tur"]  # İngilizce ve Türkçe dilleri
-lang = "+".join(langs)  # Dilleri artı işareti ile birleştir
-process_images_in_folder("/Users/yba/PycharmProjects/pythonProject/pic", lang=lang)
+process_images_in_folder("/Users/yba/PycharmProjects/pythonProject/pic", lang="eng+tur")
+txt_to_xlsx("kelimeler.txt","veriler")
+
+
