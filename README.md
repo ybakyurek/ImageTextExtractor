@@ -61,6 +61,10 @@ pip install pytesseract pillow pandas
 
 Translate this readme file into Turkish.
 
+
+
+# `TÜRKÇE`
+
 # ImageTextExtractor
 
 Bu Python betiği, görüntülerden metin çıkartma işlemi yaparak elde edilen verileri metin dosyasına kaydeder ve daha sonra bu metin verilerini bir Excel dosyasına dönüştürür. Bu, kelime kartı uygulamalarına veya sözlük verilerine uygun formatlarda veri aktarmanızı sağlar.
